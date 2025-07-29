@@ -1,0 +1,66 @@
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.application.name=payment_system\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision 77060eaca23d1a87d934cc68763ca255d479d639)
++++ b/src/main/resources/application.properties	(date 1753821814216)
+@@ -1,1 +1,33 @@
+-spring.application.name=payment_system
++spring.application.name=payments_system
++
++##### Datasource PostgreSQL #####
++spring.datasource.url=jdbc:postgresql://localhost:5432/payment_system
++spring.datasource.username=user_admin
++spring.datasource.password=admin123**
++spring.datasource.driver-class-name=org.postgresql.Driver
++
++##### HikariCP #####
++spring.datasource.hikari.pool-name=HikariPool-1
++spring.datasource.hikari.minimum-idle=2
++spring.datasource.hikari.maximum-pool-size=10
++spring.datasource.hikari.idle-timeout=30000
++spring.datasource.hikari.connection-timeout=20000
++spring.datasource.hikari.max-lifetime=1800000
++
++##### JPA #####
++# (opcional, pode remover o warning do Hibernate)
++# spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
++spring.jpa.hibernate.ddl-auto=none
++spring.jpa.properties.hibernate.show_sql=true
++spring.jpa.properties.hibernate.format_sql=true
++
++##### Flyway #####
++spring.flyway.enabled=true
++spring.flyway.locations=classpath:db/migration
++spring.flyway.baseline-on-migrate=true
++spring.flyway.validate-on-migrate=true
++
++##### Logging #####
++logging.level.org.springframework.security=DEBUG
++logging.level.com.payment_system=DEBUG
++logging.level.com.zaxxer.hikari=DEBUG
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n    <parent>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-parent</artifactId>\n        <version>3.5.4</version>\n        <relativePath/> <!-- lookup parent from repository -->\n    </parent>\n    <groupId>com</groupId>\n    <artifactId>payment_system</artifactId>\n    <version>0.0.1-SNAPSHOT</version>\n    <name>payment_system</name>\n    <description>payment_system</description>\n    <url/>\n    <licenses>\n        <license/>\n    </licenses>\n    <developers>\n        <developer/>\n    </developers>\n    <scm>\n        <connection/>\n        <developerConnection/>\n        <tag/>\n        <url/>\n    </scm>\n    <properties>\n        <java.version>17</java.version>\n    </properties>\n    <dependencies>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-data-jpa</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-data-rest</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-web-services</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.flywaydb</groupId>\n            <artifactId>flyway-core</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>org.flywaydb</groupId>\n            <artifactId>flyway-database-postgresql</artifactId>\n        </dependency>\n\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-devtools</artifactId>\n            <scope>runtime</scope>\n            <optional>true</optional>\n        </dependency>\n        <dependency>\n            <groupId>org.postgresql</groupId>\n            <artifactId>postgresql</artifactId>\n            <scope>runtime</scope>\n        </dependency>\n        <dependency>\n            <groupId>org.projectlombok</groupId>\n            <artifactId>lombok</artifactId>\n            <optional>true</optional>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-test</artifactId>\n            <scope>test</scope>\n        </dependency>\n    </dependencies>\n\n    <build>\n        <plugins>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <configuration>\n                    <annotationProcessorPaths>\n                        <path>\n                            <groupId>org.projectlombok</groupId>\n                            <artifactId>lombok</artifactId>\n                        </path>\n                    </annotationProcessorPaths>\n                </configuration>\n            </plugin>\n            <plugin>\n                <groupId>org.springframework.boot</groupId>\n                <artifactId>spring-boot-maven-plugin</artifactId>\n                <configuration>\n                    <excludes>\n                        <exclude>\n                            <groupId>org.projectlombok</groupId>\n                            <artifactId>lombok</artifactId>\n                        </exclude>\n                    </excludes>\n                </configuration>\n            </plugin>\n        </plugins>\n    </build>\n\n</project>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 77060eaca23d1a87d934cc68763ca255d479d639)
++++ b/pom.xml	(date 1753821849369)
+@@ -60,8 +60,10 @@
+         <dependency>
+             <groupId>org.postgresql</groupId>
+             <artifactId>postgresql</artifactId>
++            <version>42.7.3</version> <!-- ou a mais recente -->
+             <scope>runtime</scope>
+         </dependency>
++
+         <dependency>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
