@@ -5,6 +5,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.Date;
@@ -16,6 +19,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.CascadeType;
 import payment_system.usuarios.domain.model.enums.StatusAtividade;
 
+@Getter
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -43,4 +47,18 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<UsuarioPermissao> usuarioPermissoes = new HashSet<>();
+
+    public Usuario() {
+    }
+
+    public Usuario(UsuarioBuilder builder) {
+        this.id = builder.getId();
+        this.usuarioId = builder.getUsuarioId();
+        this.nome = builder.getNome();
+        this.email = builder.getEmail();
+        this.senha = builder.getSenha();
+        this.dataCadastro = builder.getDataCadastro();
+        this.statusAtividade = builder.getStatusAtividade();
+        this.usuarioPermissoes = builder.getUsuarioPermissoes();
+    }
 }
