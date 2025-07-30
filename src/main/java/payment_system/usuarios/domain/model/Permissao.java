@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
+import lombok.Getter;
 import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.CascadeType;
@@ -14,6 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+@Getter
 @Entity
 @Table(name = "permissao")
 public class Permissao {
@@ -32,4 +34,14 @@ public class Permissao {
 
     @OneToMany(mappedBy = "permissao", cascade = CascadeType.ALL)
     private Set<UsuarioPermissao> usuarioPermissoes = new HashSet<>();
+
+    public Permissao() {
+    }
+
+    public Permissao(PermissaoBuilder builder) {
+        this.id = builder.getId();
+        this.permissaoId = builder.getPermissaoId();
+        this.nome = builder.getNome();
+        this.usuarioPermissoes = builder.getUsuarioPermissoes();
+    }
 }
