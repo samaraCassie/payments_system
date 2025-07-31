@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import payment_system.usuarios.domain.dto.AutenticacaoDTO;
 import payment_system.usuarios.domain.dto.LoginResponseDTO;
 import payment_system.usuarios.domain.dto.RegisterDTO;
 import payment_system.usuarios.services.AutorizacaoService;
@@ -15,7 +16,9 @@ import payment_system.usuarios.services.AutorizacaoService;
 @RequestMapping("/auth")
 public class AutenticacaoController {
 
-    @Autowired private AutorizacaoService autorizacaoService;
+    @Autowired
+    private AutorizacaoService autenticacaoService;
+
 
     @PostMapping("/register")
     public ResponseEntity<?> registrar(@RequestBody RegisterDTO dto) {
@@ -24,7 +27,7 @@ public class AutenticacaoController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDTO> login(@RequestBody AutorizacaoService dto) {
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody AutenticacaoDTO dto) {
         return ResponseEntity.ok(autenticacaoService.autenticar(dto));
     }
 }

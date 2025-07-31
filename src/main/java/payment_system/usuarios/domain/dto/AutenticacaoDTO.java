@@ -1,4 +1,4 @@
 package payment_system.usuarios.domain.dto;
 
-public class AutenticacaoDTO {
+public record AutenticacaoDTO(String email, String senha) {
 }
