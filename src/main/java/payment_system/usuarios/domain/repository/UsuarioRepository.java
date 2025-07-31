@@ -1,4 +1,4 @@
-package payment_system.contas.domain.repository;
+package payment_system.usuarios.domain.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import payment_system.usuarios.domain.model.Usuario;
 

@@ -11,7 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import payment_system.contas.domain.repository.UsuarioRepository;
+import payment_system.usuarios.domain.repository.UsuarioRepository;
 import payment_system.usuarios.domain.model.Usuario;
 
 

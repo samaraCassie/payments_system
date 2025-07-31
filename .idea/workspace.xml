@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a537aa51-5fe1-4494-8611-4777a81d8806" name="Changes" comment="feat: PS-001-Configuração do Docker">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/model/Permissao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/model/Permissao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/model/UsuarioPermissao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/model/UsuarioPermissao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/contas/model/Categoria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/contas/model/Conta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/contas/model/ServicoPagamento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/contas/model/enums/StatusConta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/usuarios/model/Permissao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/usuarios/model/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/usuarios/model/UsuarioPermissao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/usuarios/model/UsuarioPermissaoID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/payment_system/usuarios/model/enums/StatusAtividade.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +74,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.PaymentSystemApplication.executor": "Run",
-    "git-widget-placeholder": "feat/PS-005-configurar-ambiente-de-seguranca",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/sam-cassie/GitHub/payments_system/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -81,6 +97,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/repository" />
       <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/domain/repository" />
     </key>
   </component>
@@ -149,6 +166,7 @@
       <workItem from="1753819470486" duration="2881000" />
       <workItem from="1753823128411" duration="424000" />
       <workItem from="1753913030862" duration="4390000" />
+      <workItem from="1753966643155" duration="520000" />
     </task>
     <task id="LOCAL-00001" summary="feat: PS-001-Configuração do Docker">
       <option name="closed" value="true" />
