@@ -56,6 +56,9 @@
     &quot;accountId&quot;: &quot;9c44fd89-9d00-4960-a753-d90102bcfb16&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -74,7 +77,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.PaymentSystemApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feat/PS-006-api-usuario-cadastro-autenticacao",
     "last_opened_file_path": "/home/sam-cassie/GitHub/payments_system/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -97,6 +100,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/services" />
       <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/repository" />
       <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/domain/repository" />
     </key>
@@ -184,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753904295653</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: PS-006-Criar API de Usuário (Cadastro e Autenticação)">
+      <option name="closed" value="true" />
+      <created>1753994079075</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1753994079075</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +217,8 @@
     <MESSAGE value="feat: PS-001-Configuração do Docker" />
     <MESSAGE value="feat: PS-004-criação de entidades e migrations" />
     <MESSAGE value="feat: PS-005-configuração de ambiente de segurança" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: PS-005-configuração de ambiente de segurança" />
+    <MESSAGE value="feat: PS-006-Criar API de Usuário (Cadastro e Autenticação)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: PS-006-Criar API de Usuário (Cadastro e Autenticação)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
