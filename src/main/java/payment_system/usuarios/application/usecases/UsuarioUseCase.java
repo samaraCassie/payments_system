@@ -1,4 +1,4 @@
-package payment_system.usuarios.aplication.usecases;
+package payment_system.usuarios.application.usecases;
 
 import java.util.UUID;
 

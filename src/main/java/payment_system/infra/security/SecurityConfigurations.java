@@ -31,8 +31,9 @@ public class SecurityConfigurations {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(HttpMethod.POST, "/auth/user/tokengeneration").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/auth/user/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth/user/tokengeneration").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth/user/register").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/user/**").permitAll()
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyRequest().authenticated()
                 )
