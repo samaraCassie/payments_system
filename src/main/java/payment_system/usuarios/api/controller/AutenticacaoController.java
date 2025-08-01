@@ -1,4 +1,4 @@
-package payment_system.usuarios.controller;
+package payment_system.usuarios.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import payment_system.usuarios.domain.dto.AutenticacaoDTO;
 import payment_system.usuarios.domain.dto.LoginResponseDTO;
 import payment_system.usuarios.domain.dto.RegisterDTO;
-import payment_system.usuarios.services.AutorizacaoService;
+import payment_system.usuarios.application.services.AutorizacaoService;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/auth/user")
 public class AutenticacaoController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class AutenticacaoController {
         return ResponseEntity.ok("Usuário registrado com sucesso.");
     }
 
-    @PostMapping("/login")
+    @PostMapping("/tokengeneration")
     public ResponseEntity<LoginResponseDTO> login(@RequestBody AutenticacaoDTO dto) {
         return ResponseEntity.ok(autenticacaoService.autenticar(dto));
     }
