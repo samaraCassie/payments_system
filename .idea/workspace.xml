@@ -39,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/PS-004-criacao-migrations" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +77,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.PaymentSystemApplication.executor": "Run",
-    "git-widget-placeholder": "feat/PS-006-api-usuario-cadastro-autenticacao",
+    "git-widget-placeholder": "fix/PS-007-ajustes-authcontroller",
     "last_opened_file_path": "/home/sam-cassie/GitHub/payments_system/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -100,6 +100,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/api/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/services" />
       <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/repository" />
       <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/domain/repository" />
@@ -196,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753994079075</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="doc: descrições no README">
+      <option name="closed" value="true" />
+      <created>1753996413823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753996413823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +216,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -218,17 +239,7 @@
     <MESSAGE value="feat: PS-004-criação de entidades e migrations" />
     <MESSAGE value="feat: PS-005-configuração de ambiente de segurança" />
     <MESSAGE value="feat: PS-006-Criar API de Usuário (Cadastro e Autenticação)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: PS-006-Criar API de Usuário (Cadastro e Autenticação)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/payment_system/contas/domain/model/ServicoPagamento.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="doc: descrições no README" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc: descrições no README" />
   </component>
 </project>

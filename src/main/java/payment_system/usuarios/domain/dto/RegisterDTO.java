@@ -1,4 +1,6 @@
 package payment_system.usuarios.domain.dto;
 
-public record RegisterDTO(String nome, String email, String senha) {
+import java.util.List;
+
+public record RegisterDTO(String nome, String email, String senha, List<String> permissoes) {
 }

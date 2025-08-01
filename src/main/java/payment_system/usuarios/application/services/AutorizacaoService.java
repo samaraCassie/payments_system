@@ -1,4 +1,4 @@
-package payment_system.usuarios.services;
+package payment_system.usuarios.application.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -8,7 +8,6 @@ import payment_system.infra.security.TokenService;
 import payment_system.usuarios.domain.dto.AutenticacaoDTO;
 import payment_system.usuarios.domain.dto.LoginResponseDTO;
 import payment_system.usuarios.domain.dto.RegisterDTO;
-import payment_system.usuarios.domain.model.Permissao;
 import payment_system.usuarios.domain.model.Usuario;
 import payment_system.usuarios.domain.model.UsuarioBuilder;
 import payment_system.usuarios.domain.model.UsuarioPermissao;
@@ -18,26 +17,18 @@ import payment_system.usuarios.domain.repository.PermissaoRepository;
 import payment_system.usuarios.domain.repository.UsuarioPermissaoRepository;
 import payment_system.usuarios.domain.repository.UsuarioRepository;
 
-import java.util.Optional;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
 public class AutorizacaoService {
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
-
-    @Autowired
-    private PermissaoRepository permissaoRepository;
-
-    @Autowired
-    private UsuarioPermissaoRepository usuarioPermissaoRepository;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
-    private TokenService tokenService;
+    @Autowired private UsuarioRepository usuarioRepository;
+    @Autowired private PermissaoRepository permissaoRepository;
+    @Autowired private UsuarioPermissaoRepository usuarioPermissaoRepository;
+    @Autowired private PasswordEncoder passwordEncoder;
+    @Autowired private TokenService tokenService;
 
     public void registrarUsuario(RegisterDTO dto) {
         if (usuarioRepository.findByEmail(dto.email()) != null) {
@@ -52,17 +43,31 @@ public class AutorizacaoService {
                 .statusAtividade(StatusAtividade.ATIVO)
                 .build();
 
-        usuarioRepository.save(usuario);
+        Set<UsuarioPermissao> permissoesDoUsuario = new HashSet<>();
 
-        // Atribuir permissão padrão "USUARIO" se existir
-        Optional<Permissao> permissaoOpt = permissaoRepository.findByNome("USUARIO");
-        permissaoOpt.ifPresent(permissao -> {
-            UsuarioPermissao usuarioPermissao = new UsuarioPermissaoBuilder()
-                    .usuario(usuario)
-                    .permissao(permissao)
-                    .build();
-            usuarioPermissaoRepository.save(usuarioPermissao);
-        });
+        if (dto.permissoes() != null && !dto.permissoes().isEmpty()) {
+            for (String nomePermissao : dto.permissoes()) {
+                permissaoRepository.findByNome(nomePermissao).ifPresent(permissao -> {
+                    UsuarioPermissao usuarioPermissao = new UsuarioPermissaoBuilder()
+                            .usuario(usuario)
+                            .permissao(permissao)
+                            .build();
+                    permissoesDoUsuario.add(usuarioPermissao);
+                });
+            }
+        } else {
+            permissaoRepository.findByNome("USUARIO").ifPresent(permissao -> {
+                UsuarioPermissao usuarioPermissao = new UsuarioPermissaoBuilder()
+                        .usuario(usuario)
+                        .permissao(permissao)
+                        .build();
+                permissoesDoUsuario.add(usuarioPermissao);
+            });
+        }
+
+        usuario.getUsuarioPermissoes().addAll(permissoesDoUsuario);
+
+        usuarioRepository.save(usuario);
     }
 
     public LoginResponseDTO autenticar(AutenticacaoDTO dto) {
