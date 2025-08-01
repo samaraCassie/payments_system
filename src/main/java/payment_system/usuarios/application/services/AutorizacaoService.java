@@ -35,7 +35,6 @@ public class AutorizacaoService {
             throw new IllegalArgumentException("E-mail já está em uso.");
         }
 
-        // Cria o usuário base
         Usuario usuario = new UsuarioBuilder()
                 .usuarioId(UUID.randomUUID())
                 .nome(dto.nome())
@@ -44,7 +43,6 @@ public class AutorizacaoService {
                 .statusAtividade(StatusAtividade.ATIVO)
                 .build();
 
-        // Lista de permissões associadas
         Set<UsuarioPermissao> permissoesDoUsuario = new HashSet<>();
 
         if (dto.permissoes() != null && !dto.permissoes().isEmpty()) {
@@ -58,7 +56,6 @@ public class AutorizacaoService {
                 });
             }
         } else {
-            // Permissão padrão "USUARIO"
             permissaoRepository.findByNome("USUARIO").ifPresent(permissao -> {
                 UsuarioPermissao usuarioPermissao = new UsuarioPermissaoBuilder()
                         .usuario(usuario)
@@ -70,7 +67,6 @@ public class AutorizacaoService {
 
         usuario.getUsuarioPermissoes().addAll(permissoesDoUsuario);
 
-        // Agora salva o usuário com os relacionamentos
         usuarioRepository.save(usuario);
     }
 
