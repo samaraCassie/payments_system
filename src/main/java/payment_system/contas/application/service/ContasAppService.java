@@ -101,6 +101,7 @@ public class ContasAppService implements ContasUseCase {
                 }).toList();
 
         repository.saveAll(contas);
+    }
     
 
     @Override

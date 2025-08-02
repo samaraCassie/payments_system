@@ -295,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754103505214</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="chore: Atualização README">
+      <option name="closed" value="true" />
+      <created>1754108905162</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1754108905162</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +361,8 @@
     <MESSAGE value="feat: PS-009 – API categoria" />
     <MESSAGE value="feat: PS-009 – API do serviço de pagamento" />
     <MESSAGE value="feat: PS-009 – API da conta" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: PS-009 – API da conta" />
+    <MESSAGE value="chore: Atualização README" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: Atualização README" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
