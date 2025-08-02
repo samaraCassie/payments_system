@@ -1,14 +1,21 @@
 package payment_system.contas.application.service;
 
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import payment_system.contas.api.criteria.ServicoPagamentoCriteria;
 import payment_system.contas.application.usecase.ServicosPagamentoUseCase;
 import payment_system.contas.domain.dto.ServicoPagamentoRequestDTO;
+import payment_system.contas.domain.dto.ServicoPagamentoResponseDTO;
 import payment_system.contas.domain.model.ServicoPagamento;
 import payment_system.contas.domain.model.ServicoPagamentoBuilder;
 import payment_system.contas.domain.repository.ServicoPagamentoRepository;
+import payment_system.contas.domain.specification.ServicoPagamentoSpecification;
 import payment_system.utils.CsvUtil;
 
 import java.util.List;
@@ -46,5 +53,16 @@ public class ServicosPagamentoAppService implements ServicosPagamentoUseCase {
                 .toList();
 
         repository.saveAll(entidades);
+    }
+
+    @Override
+    public Page<ServicoPagamentoResponseDTO> buscarServicos(ServicoPagamentoCriteria filtro, Pageable pageable) {
+        Specification<ServicoPagamento> spec = ServicoPagamentoSpecification.filtrar(filtro);
+        return repository.findAll(spec, pageable).map(servico ->
+                ServicoPagamentoResponseDTO.builder()
+                        .nome(servico.getNome())
+                        .descricao(servico.getDescricao())
+                        .build()
+        );
     }
 }

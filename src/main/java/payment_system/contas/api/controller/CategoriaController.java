@@ -3,7 +3,12 @@ package payment_system.contas.api.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springdoc.core.annotations.ParameterObject;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
+import payment_system.contas.api.criteria.CategoriaCriteria;
 import payment_system.contas.application.usecase.CategoriaUseCase;
 import payment_system.contas.domain.dto.CategoriaRequestDTO;
+import payment_system.contas.domain.dto.CategoriaResponseDTO;
 
 @RestController
 @RequestMapping("api/category")
@@ -27,7 +34,6 @@ public class CategoriaController {
         return ResponseEntity.ok().build();
     }
 
-
     @PostMapping(value = "/register-csv", consumes = "multipart/form-data")
     public ResponseEntity<?> registrarCategoriasViaCsv(@RequestParam("file") MultipartFile file) {
         try {
@@ -38,5 +44,10 @@ public class CategoriaController {
         }
     }
 
-
+    @GetMapping("/list")
+    public Page<CategoriaResponseDTO> listarCategorias(
+            @ParameterObject @ModelAttribute CategoriaCriteria filtro,
+            @ParameterObject Pageable pageable) {
+        return categoriaUseCase.buscarCategorias(filtro, pageable);
+    }
 }
