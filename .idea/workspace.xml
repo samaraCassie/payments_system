@@ -32,6 +32,7 @@
       <list>
         <option value="Enum" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -77,14 +78,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.PaymentSystemApplication.executor": "Run",
-    "git-widget-placeholder": "fix/PS-007-ajustes-authcontroller",
+    "git-widget-placeholder": "feat/PS-009-criar-contas-api",
     "last_opened_file_path": "/home/sam-cassie/GitHub/payments_system/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -100,10 +101,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/api/controller" />
-      <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/services" />
-      <recent name="$PROJECT_DIR$/src/main/java/payment_system/usuarios/domain/repository" />
-      <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/domain/repository" />
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/domain/model/enums" />
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/domain/model" />
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/api/criteria" />
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/application/api/criteria" />
+      <recent name="$PROJECT_DIR$/src/main/java/payment_system/contas/api/controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,13 +207,116 @@
       <option name="project" value="LOCAL" />
       <updated>1753996413823</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: PS-007 – Ajustes nas configurações do serviços de Usuario e Permissão">
+      <option name="closed" value="true" />
+      <created>1754065745793</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754065745793</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: PS-007 – Ajustes nas configurações do serviços de Usuario e Permissão">
+      <option name="closed" value="true" />
+      <created>1754065853418</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1754065853418</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: PS-008 – Consultas e Busca Avançada de Usuários">
+      <option name="closed" value="true" />
+      <created>1754072817295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754072817295</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: PS-008 – Consultas e Busca Avançada de Usuários">
+      <option name="closed" value="true" />
+      <created>1754072838007</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754072838007</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: PS-009 – API de Categoria">
+      <option name="closed" value="true" />
+      <created>1754099257062</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754099257063</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: PS-009 – API de Categoria">
+      <option name="closed" value="true" />
+      <created>1754102604855</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754102604855</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: PS-009 – utils">
+      <option name="closed" value="true" />
+      <created>1754102811598</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1754102811598</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: PS-009 – novo metodo em UsuarioRepository">
+      <option name="closed" value="true" />
+      <created>1754103017888</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754103017888</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: PS-009 – API categoria">
+      <option name="closed" value="true" />
+      <created>1754103218516</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1754103218516</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: PS-009 – API do serviço de pagamento">
+      <option name="closed" value="true" />
+      <created>1754103342001</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1754103342001</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: PS-009 – API da conta">
+      <option name="closed" value="true" />
+      <created>1754103505214</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1754103505214</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/fix/PS-007-ajustes-authcontroller" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -222,7 +327,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="feat/PS-009-criar-contas-api" />
                       </list>
                     </value>
                   </entry>
@@ -240,6 +345,18 @@
     <MESSAGE value="feat: PS-005-configuração de ambiente de segurança" />
     <MESSAGE value="feat: PS-006-Criar API de Usuário (Cadastro e Autenticação)" />
     <MESSAGE value="doc: descrições no README" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc: descrições no README" />
+    <MESSAGE value="fix: PS-007 – Ajustes nas configurações do serviços de Usuario e Permissão" />
+    <MESSAGE value="feat: PS-008 – Consultas e Busca Avançada de Usuários" />
+    <MESSAGE value="feat: PS-009 – API de Categoria" />
+    <MESSAGE value="feat: PS-009 – utils" />
+    <MESSAGE value="feat: PS-009 – novo metodo em UsuarioRepository" />
+    <MESSAGE value="feat: PS-009 – API categoria" />
+    <MESSAGE value="feat: PS-009 – API do serviço de pagamento" />
+    <MESSAGE value="feat: PS-009 – API da conta" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: PS-009 – API da conta" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
