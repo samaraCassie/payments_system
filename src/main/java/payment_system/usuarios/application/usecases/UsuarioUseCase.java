@@ -6,10 +6,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import payment_system.usuarios.api.criteria.UsuarioCriteria;
-import payment_system.usuarios.domain.model.Usuario;
+import payment_system.usuarios.domain.dto.UsuarioResponseDTO;;
 
 public interface UsuarioUseCase {
 
-    Usuario buscarPorUsuarioId(UUID usuarioId);
-    Page<Usuario> buscarUsuario(UsuarioCriteria filtro, Pageable pageable);
+    UsuarioResponseDTO buscarPorUsuarioId(UUID usuarioId);
+
+    Page<UsuarioResponseDTO> buscarUsuario(UsuarioCriteria filtro, Pageable pageable);
+
 }
