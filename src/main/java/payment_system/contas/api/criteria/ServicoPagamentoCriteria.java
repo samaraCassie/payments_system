@@ -1,4 +1,4 @@
 package payment_system.contas.api.criteria;
 
-public class CategoriaCriteria {
+public class ServicoPagamentoCriteria {
 }
