@@ -1,6 +1,9 @@
 # Sistema de Controle de Contas
 
-descrição
+### Informações Detalhadas
+
+Para mais detalhes sobre o projeto e documentação completa, consulte o link abaixo:
+[link do notion](https://cyclic-swordtail-44f.notion.site/Documenta-o-T-cnica-Sistema-de-Pagamentos-240bc2e554f08017aa88e9035fdd7853)
 
 ### Tecnologias Utilizadas:
 
@@ -48,7 +51,7 @@ Este projeto consiste em uma aplicação de pagamento que permite o registro de 
 1. **Clone o repositório**:
     ```sh
     git clone https://github.com/samaraCassie/payments_system.git
-    cd payments_system
+    cd payments_system/devops
     ```
 
 ---
@@ -97,10 +100,3 @@ Este projeto consiste em uma aplicação de pagamento que permite o registro de 
     ```
     http://localhost:8080/swagger-ui/index.html#/
     ```
-
----
-
-### Informações Adicionais
-
-7. Para mais detalhes sobre o projeto e documentação completa, consulte o link abaixo:
-   link do notion

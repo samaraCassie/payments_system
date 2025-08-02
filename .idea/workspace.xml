@@ -40,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feat/PS-010-–-GetAll-com-Filtros-de-Contas" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +78,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.PaymentSystemApplication.executor": "Run",
-    "git-widget-placeholder": "feat/PS-009-criar-contas-api",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/sam-cassie/GitHub/payments_system/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
