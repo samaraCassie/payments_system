@@ -101,7 +101,7 @@ public class ContasAppService implements ContasUseCase {
                 }).toList();
 
         repository.saveAll(contas);
-    }
+    
 
     @Override
     public Page<ContaResponseDTO> buscarContas(ContasCriteria filtro, Pageable pageable) {
