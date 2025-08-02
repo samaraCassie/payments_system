@@ -12,4 +12,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, UUID>, JpaSpec
     Usuario findByEmail(String email);
 
     Optional<Usuario> findByUsuarioId(UUID usuarioId);
+
+    Optional<Usuario> findByEmailIgnoreCase(String email);
 }
